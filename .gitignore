@@ -1,3 +1,5 @@
 .vscode/
 .prettierrc
 demo.ipynb
+__pycache__/
+.env*
