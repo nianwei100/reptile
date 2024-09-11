@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "reptile"
+version = "0.1.0"
+description = ""
+authors = ["nianwei100"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+yapf = "^0.40.2"
+pylint = "^3.2.7"
+ipykernel = "^6.29.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
