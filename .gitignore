@@ -1,5 +1,8 @@
-.vscode/
+# uncommit
+.vscode/*sftp.json
 .prettierrc
 .env*
+.venv/
+.mypy_cache/
 
 
