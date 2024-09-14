@@ -1,5 +1,4 @@
 # uncommit
-.vscode/*sftp.json
 .prettierrc
 .env*
 .venv/

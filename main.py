@@ -1,4 +1,4 @@
-class Microware(object):
+class Microware:
 
     def __init__(self, brand: str, power_rating: str) -> None:
         self.brand = brand
