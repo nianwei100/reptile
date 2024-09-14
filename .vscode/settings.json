@@ -1,4 +1,9 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.formatting.provider": "yapf"
+    "python.formatting.provider": "yapf",
+    "python.linting.pylintArgs": [
+        "--disable=missing-module-docstring",
+        "--disable=missing-class-docstring",
+        "--disable=missing-function-docstring"
+    ]
 }
