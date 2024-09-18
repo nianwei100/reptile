@@ -1,3 +1,9 @@
+from random import randint
+
+from rich import print
+from rich.highlighter import Highlighter
+
+
 class Microware:
 
     def __init__(self, brand: str, power_rating: str) -> None:
@@ -36,6 +42,10 @@ class Microware:
 smeg: Microware = Microware('Smeg', 'B')
 bosch: Microware = Microware('Bosch', 'C')
 samsung: Microware = Microware('Samsung', 'A')
-samsung.turn_on()
-samsung.run(11)
-samsung.turn_off()
+
+
+class RainbowHighlighter(Highlighter):
+
+    def highlight(self, text) -> None:
+        for index in range(len(text)):
+            text.stylize(f"color({randint(16, 255)})", index, index + 1)
