@@ -1,5 +1,5 @@
 # uncommit
 .prettierrc
 .venv/
-
-
+.mypy_cache/
+.vscode/

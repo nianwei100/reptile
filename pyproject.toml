@@ -2,7 +2,7 @@
 name = "reptile"
 version = "0.1.0"
 description = ""
-authors = ["nianwei100"]
+authors = ["nianwei"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -10,15 +10,12 @@ python = "^3.8"
 
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.11.2"
-pretty-errors = "^1.2.25"
-rich = "^13.8.1"
 yapf = "^0.40.2"
 pylint = "^3.2.7"
-
-
-[tool.poetry.group.test.dependencies]
-pytest = "^8.3.3"
+rich = "^13.8.1"
+ipykernel = "^6.29.5"
+mypy = "^1.11.2"
+pretty-errors = "^1.2.25"
 
 [build-system]
 requires = ["poetry-core"]
