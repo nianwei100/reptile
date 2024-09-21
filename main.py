@@ -1,14 +1,27 @@
 from __future__ import barry_as_FLUFL
 
-from functools import reduce
+from functools import lru_cache, reduce
 from random import randint
-from typing import Dict, List, NewType, Optional, Set, Tuple, Union
+from typing import Dict, Generator, Iterator, List, NewType, Optional, Set, Tuple, Union
 
 import pretty_errors
 from rich.highlighter import Highlighter
 from rich.text import Text
 
 pretty_errors.configure(display_link=True)
+
+
+def generate_numbers(n: int) -> Union[Generator[int, None, None], Iterator[int]]:
+    for i in range(n):
+        yield i
+
+
+@lru_cache(maxsize=None)
+def fibonacci(n: int) -> int:
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 class RainbowHighlighter(Highlighter):
@@ -53,9 +66,9 @@ class Microware:
         return f'Microwave(brand="{self.brand}", power_rating="{self.power_rating}")'
 
 
-# smeg: Microware = Microware('Smeg', 'B')
-# bosch: Microware = Microware('Bosch', 'C')
-# samsung: Microware = Microware('Samsung', 'A')
+smeg: Microware = Microware('Smeg', 'B')
+bosch: Microware = Microware('Bosch', 'C')
+samsung: Microware = Microware('Samsung', 'A')
 
 
 def greeting(name: Optional[str]) -> str:
@@ -104,5 +117,59 @@ def get_unique_numbers() -> Set[Union[str, int]]:
     return {1, 2, 3, 4, 5, 6, '7'}
 
 
+def partition(arr: List[Union[float, int]], low: int, high: int) -> Union[int, float]:
+    the_one = arr[low]
+
+    i = low
+    j = high
+
+    while i < j:
+        while arr[j] >= the_one and i < j:
+            j = j - 1
+
+        while arr[i] <= the_one and i < j:
+            i = i + 1
+
+        arr[i], arr[j] = arr[j], arr[i]
+
+    arr[i], arr[low] = arr[low], arr[i]
+
+    return i
+
+
+def quick_sort(arr, low, high):
+    if low < high:
+        index = partition(arr, low, high)
+
+        quick_sort(arr, low, index - 1)
+        quick_sort(arr, index + 1, high)
+
+
+def sort(arr):
+    print("before")
+    print(arr)
+    quick_sort(arr, 0, len(arr) - 1)
+    print("after")
+    print(arr)
+
+
 if __name__ == '__main__':
-    pass
+    input_arr = [
+        24,
+        5,
+        8,
+        954,
+        6,
+        49,
+        55,
+        66,
+        86,
+        32,
+        431,
+        42,
+        36,
+        3242,
+        78,
+        4.5,
+    ]
+    sort(input_arr)
