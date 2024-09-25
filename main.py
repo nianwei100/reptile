@@ -1,7 +1,5 @@
 from __future__ import barry_as_FLUFL
 
-<<<<<<< HEAD
-=======
 from functools import lru_cache, reduce
 from random import randint
 from typing import Dict, Generator, Iterator, List, NewType, Optional, Set, Tuple, Union
@@ -14,25 +12,23 @@ pretty_errors.configure(display_link=True)
 
 
 def generate_numbers(n: int) -> Union[Generator[int, None, None], Iterator[int]]:
-    for i in range(n):
-        yield i
+	for i in range(n):
+		yield i
 
 
 @lru_cache(maxsize=None)
 def fibonacci(n: int) -> int:
-    if n <= 1:
-        return n
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+	if n <= 1:
+		return n
+	else:
+		return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 class RainbowHighlighter(Highlighter):
+	def highlight(self, text: Text) -> None:
+		for index in range(len(text)):
+			text.stylize(f'color({randint(16, 255)})', index, index + 1)
 
-    def highlight(self, text: Text) -> None:
-        for index in range(len(text)):
-            text.stylize(f"color({randint(16, 255)})", index, index + 1)
-
->>>>>>> dev
 
 class Microware:
 	def __init__(self, brand: str, power_rating: str) -> None:
@@ -74,14 +70,14 @@ samsung: Microware = Microware('Samsung', 'A')
 
 
 def greeting(name: Optional[str]) -> str:
-    return f'Hello {name}'
+	return f'Hello {name}'
 
 
 def double_or_square(number: Union[int, float]) -> Union[int, float]:
-    if isinstance(number, int):
-        return number * 2
-    else:
-        return number**2
+	if isinstance(number, int):
+		return number * 2
+	else:
+		return number**2
 
 
 UserId = NewType('UserId', int)
@@ -89,7 +85,7 @@ some_id = UserId(1243)
 
 
 def add(x: int, y: int) -> int:
-    return x + y
+	return x + y
 
 
 num_list = [i for i in range(1, 101)]
@@ -97,81 +93,81 @@ result = reduce(add, num_list)
 
 
 def factorial(n):
-    assert n >= 0, 'n should be greater than 0'
-    if n == 0 or n == 1:
-        return 1
-    return reduce(lambda a, b: a * b, range(1, n + 1))
+	assert n >= 0, 'n should be greater than 0'
+	if n == 0 or n == 1:
+		return 1
+	return reduce(lambda a, b: a * b, range(1, n + 1))
 
 
 def get_name_age() -> Tuple[str, int]:
-    return '王五', 18
+	return '王五', 18
 
 
 def get_students() -> List[str]:
-    return ["小黑", "小华", "小米"]
+	return ['小黑', '小华', '小米']
 
 
 def get_scores() -> Dict[str, int]:
-    return {"python": 100, "java": 80, "go": 80}
+	return {'python': 100, 'java': 80, 'go': 80}
 
 
 def get_unique_numbers() -> Set[Union[str, int]]:
-    return {1, 2, 3, 4, 5, 6, '7'}
+	return {1, 2, 3, 4, 5, 6, '7'}
 
 
 def partition(arr: List[Union[float, int]], low: int, high: int) -> Union[int, float]:
-    the_one = arr[low]
+	the_one = arr[low]
 
-    i = low
-    j = high
+	i = low
+	j = high
 
-    while i < j:
-        while arr[j] >= the_one and i < j:
-            j = j - 1
+	while i < j:
+		while arr[j] >= the_one and i < j:
+			j = j - 1
 
-        while arr[i] <= the_one and i < j:
-            i = i + 1
+		while arr[i] <= the_one and i < j:
+			i = i + 1
 
-        arr[i], arr[j] = arr[j], arr[i]
+		arr[i], arr[j] = arr[j], arr[i]
 
-    arr[i], arr[low] = arr[low], arr[i]
+	arr[i], arr[low] = arr[low], arr[i]
 
-    return i
+	return i
 
 
 def quick_sort(arr, low, high):
-    if low < high:
-        index = partition(arr, low, high)
+	if low < high:
+		index = partition(arr, low, high)
 
-        quick_sort(arr, low, index - 1)
-        quick_sort(arr, index + 1, high)
+		quick_sort(arr, low, index - 1)
+		quick_sort(arr, index + 1, high)
 
 
 def sort(arr):
-    print("before")
-    print(arr)
-    quick_sort(arr, 0, len(arr) - 1)
-    print("after")
-    print(arr)
+	print('before')
+	print(arr)
+	quick_sort(arr, 0, len(arr) - 1)
+	print('after')
+	print(arr)
 
 
 if __name__ == '__main__':
-    input_arr = [
-        24,
-        5,
-        8,
-        954,
-        6,
-        49,
-        55,
-        66,
-        86,
-        32,
-        431,
-        42,
-        36,
-        3242,
-        78,
-        4.5,
-    ]
-    sort(input_arr)
+	input_arr = [
+		24,
+		5,
+		8,
+		954,
+		6,
+		49,
+		55,
+		66,
+		86,
+		32,
+		431,
+		42,
+		36,
+		3242,
+		78,
+		4.5,
+	]
+	sort(input_arr)
