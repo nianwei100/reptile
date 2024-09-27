@@ -2,6 +2,6 @@
 .prettierrc
 .venv/
 .mypy_cache/
-.vscode/
 .ruff_cache/
+.vscode/
 

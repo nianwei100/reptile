@@ -5,13 +5,14 @@ from random import randint
 from typing import Dict, Generator, Iterator, List, NewType, Optional, Set, Tuple, Union
 
 import pretty_errors
+from rich import print
 from rich.highlighter import Highlighter
 from rich.text import Text
 
 pretty_errors.configure(display_link=True)
 
 
-def generate_numbers(n: int) -> Union[Generator[int, None, None], Iterator[int]]:
+def generate_numbers(n: int) -> Union[Generator[int,None,None], Iterator[int]]:
 	for i in range(n):
 		yield i
 
