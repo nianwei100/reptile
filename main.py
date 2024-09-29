@@ -12,7 +12,7 @@ from rich.text import Text
 pretty_errors.configure(display_link=True)
 
 
-def generate_numbers(n: int) -> Union[Generator[int,None,None], Iterator[int]]:
+def generate_numbers(n: int) -> Union[Generator[int, None, None], Iterator[int]]:
 	for i in range(n):
 		yield i
 

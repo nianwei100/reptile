@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "reptile"
 version = "0.1.0"
-description = ""
+description = "Python Type Hint"
 authors = ["nianwei"]
 readme = "README.md"
 
@@ -21,6 +21,7 @@ pretty-errors = "^1.2.25"
 mypy = "^1.11.2"
 ipykernel = "^6.29.5"
 pytest = "^8.3.3"
+pandas = "^2.2.3"
 pre-commit = "^3.8.0"
 
 
