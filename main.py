@@ -1,5 +1,3 @@
-from __future__ import barry_as_FLUFL
-
 from functools import lru_cache, reduce
 from random import randint
 from typing import Dict, Generator, Iterator, List, NewType, Optional, Set, Tuple, Union
