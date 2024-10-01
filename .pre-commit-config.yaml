@@ -8,10 +8,12 @@ repos:
         description: "Run 'ruff' for extremely fast Python linting"
         types_or: [python, pyi]
         args: [--fix]
+        additional_dependencies: [toml]
       - id: ruff-format
         name: ruff-format
         description: "Run 'ruff format' for extremely fast Python formatting"
         types_or: [python, pyi]
+        additional_dependencies: [toml]
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.11.2
     hooks:
@@ -19,6 +21,7 @@ repos:
         name: mypy
         description: ''
         types_or: [python, pyi]
+        additional_dependencies: [toml]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
@@ -26,6 +29,8 @@ repos:
       - id: check-toml
       - id: check-merge-conflict
       - id: trailing-whitespace
+      - id: check-added-large-files
+      - id: check-json
   - repo: local
     hooks:
       - id: changelogs-rst
@@ -33,4 +38,3 @@ repos:
         entry: changelog filenames must end in .rst
         language: fail
         files: 'changelog/.*(?<!\.rst)$'
-
