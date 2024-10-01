@@ -35,7 +35,7 @@ line-length = 120
 extend-include = ["*.ipynb"]
 
 [tool.ruff.lint]
-ignore = ["F401"]
+ignore=["F401"]
 extend-select = ["I"]
 
 [tool.ruff.lint.isort]
