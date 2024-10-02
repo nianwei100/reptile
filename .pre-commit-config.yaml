@@ -57,4 +57,4 @@ repos:
         name: prettier
         description: ''
         types_or: [json, javascript, css]
-        args: [--print-width, '12', --single-quote]
+        args: []
