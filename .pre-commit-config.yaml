@@ -56,5 +56,5 @@ repos:
       - id: prettier
         name: prettier
         description: ''
-        types: [json]
+        types_or: [json, javascript, css]
         args: []
