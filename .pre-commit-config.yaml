@@ -51,7 +51,10 @@ repos:
         types: [yaml]
         additional_dependencies: [toml]
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.5.1
+    rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
+        name: prettier
+        description: ''
         types: [json]
+        args: []
