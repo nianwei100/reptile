@@ -4,4 +4,4 @@
 .ruff_cache/
 .vscode/
 poetry.lock
-./node_modules
+node_modules/

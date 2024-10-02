@@ -21,6 +21,11 @@ pretty-errors = "^1.2.25"
 mypy = "^1.11.2"
 pre-commit = "^3.8.0"
 yamlfix = "^1.17.0"
+fake-useragent = "^1.5.1"
+faker = "^30.1.0"
+pendulum = "^3.0.0"
+toolz = "^0.12.1"
+bar-chart-race = "^0.1.0"
 
 
 [build-system]
