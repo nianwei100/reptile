@@ -27,7 +27,6 @@ repos:
     rev: v4.6.0
     hooks:
       - id: check-yaml
-        additional_dependencies: [toml]
       - id: check-toml
       - id: check-merge-conflict
       - id: trailing-whitespace
