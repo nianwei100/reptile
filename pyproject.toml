@@ -26,6 +26,10 @@ faker = "^30.1.0"
 pendulum = "^3.0.0"
 toolz = "^0.12.1"
 bar-chart-race = "^0.1.0"
+pandas = "^2.2.3"
+bs4 = "^0.0.2"
+requests = "^2.32.3"
+jieba = "^0.42.1"
 
 
 [build-system]
