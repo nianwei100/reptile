@@ -57,7 +57,7 @@ repos:
         types_or: [json, javascript, css]
         args: []
   - repo: https://github.com/detailyang/pre-commit-shell
-    rev: v1.0.6
+    rev: 1.0.5
     hooks:
       - id: shell-lint
         name: Shell Syntax Check
