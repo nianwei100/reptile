@@ -5,4 +5,3 @@
 .vscode/
 poetry.lock
 node_modules/
-DXYArea.csv

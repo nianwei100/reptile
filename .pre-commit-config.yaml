@@ -30,7 +30,6 @@ repos:
       - id: check-toml
       - id: check-merge-conflict
       - id: trailing-whitespace
-      - id: check-added-large-files
       - id: check-json
   - repo: local
     hooks:
@@ -57,3 +56,43 @@ repos:
         description: ''
         types_or: [json, javascript, css]
         args: []
+  - repo: https://github.com/detailyang/pre-commit-shell
+    rev: v1.0.6
+    hooks:
+      - id: shell-lint
+        name: Shell Syntax Check
+        description: Check Shell Syntax on ALL staged files with user friendly messages
+          and colors
+        entry: pre_commit_hooks/shell-lint.sh
+        language: script
+        types: [shell]
+        args: [--format=json]
+  - repo: https://github.com/syntaqx/git-hooks
+    rev: v0.0.18
+    hooks:
+      - id: shellcheck
+        name: Test shell scripts with shellcheck
+        description: Shell scripts conform to shellcheck
+        types: [shell]
+        entry: hooks/shellcheck.sh
+        language: script
+        exclude_types: [csh, perl, python, ruby, tcsh, zsh]
+        args: [-e, SC1091]
+      - id: shfmt
+        name: Check shell style with shfmt
+        language: script
+        entry: hooks/shfmt.sh
+        types: [shell]
+        exclude_types: [csh, perl, python, ruby, tcsh, zsh]
+        args: [-l, -i, '2', -ci, -w, -d]
+  - repo: https://github.com/mrtazz/checkmake
+    rev: 0.2.2
+    hooks:
+      - id: checkmake
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
+    rev: v1.1.2
+    hooks:
+      - id: htmlhint
+        args: [--config, .htmlhintrc]
+      - id: dockerfile_lint
+        args: [--json, --verbose, --dockerfile]
