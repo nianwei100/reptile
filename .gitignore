@@ -2,6 +2,5 @@
 .venv/
 .mypy_cache/
 .ruff_cache/
-.vscode/
 poetry.lock
 node_modules/
