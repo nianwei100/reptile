@@ -6,7 +6,7 @@ authors = ["nianwei"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.8"
 
 
 [[tool.poetry.source]]
@@ -15,21 +15,23 @@ url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
 priority = "primary"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.6.8"
-rich = "^13.8.1"
+ruff = {extras = ["jupyter"], version = "^0.6.8"}
+rich = {extras = ["jupyter"], version = "^13.9.1"}
 pretty-errors = "^1.2.25"
-mypy = "^1.11.2"
-pre-commit = "^3.8.0"
-yamlfix = "^1.17.0"
+mypy = "~1.10"
+pre-commit = "^3"
 fake-useragent = "^1.5.1"
 faker = "^30.1.0"
 pendulum = "^3.0.0"
 toolz = "^0.12.1"
 bar-chart-race = "^0.1.0"
-pandas = "^2.2.3"
 bs4 = "^0.0.2"
 requests = "^2.32.3"
 jieba = "^0.42.1"
+ipykernel = "^6.29.5"
+yamlfix = "~1"
+pandas = "~2"
+returns = {version = "~0", extras = ["compatible-mypy"]}
 
 
 [build-system]
@@ -37,7 +39,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py38"
 line-length = 120
 extend-include = ["*.ipynb"]
 
