@@ -1,6 +1,9 @@
 ---
 exclude: ^$
 default_stages: [commit]
+default_language_version: {}
+files: ''
+fail_fast: false
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.6.8
