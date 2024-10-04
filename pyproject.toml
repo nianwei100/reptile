@@ -41,6 +41,8 @@ python-dotenv = "^1.0.1"
 xpinyin = "^0.7.6"
 iredis = "^1.15.0"
 loguru = "^0.7.2"
+fabulous = "^0.4.0"
+googletrans = "^3.0.0"
 
 
 [build-system]
