@@ -32,6 +32,15 @@ ipykernel = "^6.29.5"
 yamlfix = "~1"
 pandas = "~2"
 returns = {version = "~0", extras = ["compatible-mypy"]}
+prettytable = "^3.11.0"
+mycli = "^1.27.2"
+pgcli = "^4.1.0"
+litecli = "^1.12.3"
+pytest = "^8.3.3"
+python-dotenv = "^1.0.1"
+xpinyin = "^0.7.6"
+iredis = "^1.15.0"
+loguru = "^0.7.2"
 
 
 [build-system]
