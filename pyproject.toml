@@ -92,5 +92,5 @@ no_implicit_optional = true
 warn_unused_ignores = true
 
 [tool.yamlfix]
-line_length = 80
-indentation = 2
+line_length = 55
+indentation = 4
