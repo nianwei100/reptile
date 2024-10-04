@@ -43,6 +43,12 @@ iredis = "^1.15.0"
 loguru = "^0.7.2"
 fabulous = "^0.4.0"
 googletrans = "^3.0.0"
+supervisor = "^4.2.5"
+snownlp = "^0.12.3"
+textblob = "^0.18.0.post0"
+argcomplete = "^3.5.0"
+pypinyin = "^0.53.0"
+thefuck = "^3.32"
 
 
 [build-system]
