@@ -9,12 +9,10 @@ repos:
         description: Run 'ruff' for extremely fast Python linting
         types_or: [python, pyi]
         args: [--fix]
-        additional_dependencies: [toml]
       - id: ruff-format
         name: ruff-format
         description: Run 'ruff format' for extremely fast Python formatting
         types_or: [python, pyi]
-        additional_dependencies: [toml]
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.11.2
     hooks:
@@ -22,7 +20,6 @@ repos:
         name: mypy
         description: Run mypy static analysis tool
         types_or: [python, pyi]
-        additional_dependencies: [toml]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
@@ -56,7 +53,6 @@ repos:
         language: python
         language_version: python3
         types: [yaml]
-        additional_dependencies: [pyproject.toml]
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
     hooks:
