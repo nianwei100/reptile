@@ -30,25 +30,16 @@ requests = "^2.32.3"
 jieba = "^0.42.1"
 ipykernel = "^6.29.5"
 yamlfix = "~1"
-pandas = "~2"
 returns = {version = "~0", extras = ["compatible-mypy"]}
-prettytable = "^3.11.0"
 mycli = "^1.27.2"
 pgcli = "^4.1.0"
 litecli = "^1.12.3"
 pytest = "^8.3.3"
 python-dotenv = "^1.0.1"
-xpinyin = "^0.7.6"
 iredis = "^1.15.0"
 loguru = "^0.7.2"
-fabulous = "^0.4.0"
-googletrans = "^3.0.0"
-supervisor = "^4.2.5"
 snownlp = "^0.12.3"
 textblob = "^0.18.0.post0"
-argcomplete = "^3.5.0"
-pypinyin = "^0.53.0"
-thefuck = "^3.32"
 
 
 [build-system]
@@ -98,5 +89,5 @@ no_implicit_optional = true
 warn_unused_ignores = true
 
 [tool.yamlfix]
-line_length = 80
+line_length = 60
 indentation = 2
