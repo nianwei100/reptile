@@ -59,7 +59,7 @@ extend-select = ["I"]
 [tool.ruff.lint.isort]
 combine-as-imports = true
 force-wrap-aliases = true
-lines-after-imports = 1
+lines-after-imports = 2
 section-order = [
     "future",
     "standard-library",
