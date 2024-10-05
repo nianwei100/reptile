@@ -5,8 +5,15 @@ default_language_version: {python: python3.8}
 files: ''
 fail_fast: false
 repos:
+  - repo: local
+    hooks:
+      - id: changelogs-rst
+        name: changelogs must be rst
+        entry: changelog filenames must end in .rst
+        language: fail
+        files: changelog/.*(?<!\.rst)$
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.8
+    rev: v0.6.9
     hooks:
       - id: ruff
         name: ruff
@@ -42,13 +49,6 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
         args: [--fix=lf]
-  - repo: local
-    hooks:
-      - id: changelogs-rst
-        name: changelogs must be rst
-        entry: changelog filenames must end in .rst
-        language: fail
-        files: changelog/.*(?<!\.rst)$
   - repo: https://github.com/lyz-code/yamlfix
     rev: 1.17.0
     hooks:
@@ -71,8 +71,7 @@ repos:
     hooks:
       - id: shell-lint
         name: Shell Syntax Check
-        description: Check Shell Syntax on ALL staged files with user friendly messages
-          and colors
+        description: Check Shell Syntax on ALL staged files with user friendly messages and colors
         entry: pre_commit_hooks/shell-lint.sh
         language: script
         types: [shell]
