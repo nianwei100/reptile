@@ -24,10 +24,8 @@ fake-useragent = "^1.5.1"
 faker = "^30.1.0"
 pendulum = "^3.0.0"
 toolz = "^0.12.1"
-bar-chart-race = "^0.1.0"
 bs4 = "^0.0.2"
 requests = "^2.32.3"
-jieba = "^0.42.1"
 ipykernel = "^6.29.5"
 yamlfix = "~1"
 returns = {version = "~0", extras = ["compatible-mypy"]}
@@ -38,8 +36,7 @@ pytest = "^8.3.3"
 python-dotenv = "^1.0.1"
 iredis = "^1.15.0"
 loguru = "^0.7.2"
-snownlp = "^0.12.3"
-textblob = "^0.18.0.post0"
+pandas = "^2"
 
 
 [build-system]
@@ -48,7 +45,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 target-version = "py38"
-line-length = 120
+line-length = 119
 extend-include = ["*.ipynb"]
 
 [tool.ruff.lint]
