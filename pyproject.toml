@@ -8,7 +8,6 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.8"
 
-
 [[tool.poetry.source]]
 name = "mirrors"
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
@@ -38,7 +37,6 @@ iredis = "^1.15.0"
 loguru = "^0.7.2"
 pandas = "^2"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -52,8 +50,6 @@ fix = true
 
 [tool.ruff.lint]
 extend-select = ["I"]
-
-
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
