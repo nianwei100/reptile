@@ -5,3 +5,4 @@
 poetry.lock
 node_modules/
 demo.ipynb
+.env
