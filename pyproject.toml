@@ -54,13 +54,9 @@ extend-select = ["I"]
 
 
 [tool.ruff.lint.isort]
-case-sensitive = false
 combine-as-imports = true
 force-wrap-aliases = true
-known-first-party = []
-known-third-party = []
-lines-after-imports = -1
-order-by-type = false
+lines-after-imports = 1
 section-order = [
     "future",
     "standard-library",
