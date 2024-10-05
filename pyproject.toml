@@ -56,6 +56,7 @@ extend-select = ["I"]
 [tool.ruff.lint.isort]
 case-sensitive = false
 combine-as-imports = true
+force-wrap-aliases = true
 force-sort-within-sections = false
 known-first-party = []
 known-third-party = []
