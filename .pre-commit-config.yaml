@@ -12,7 +12,6 @@ repos:
         name: ruff
         description: Run 'ruff' for extremely fast Python linting
         types_or: [python, pyi, jupyter]
-        args: [--fix]
       - id: ruff-format
         name: ruff-format
         description: Run 'ruff format' for extremely fast Python formatting
