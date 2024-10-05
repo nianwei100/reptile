@@ -49,8 +49,9 @@ line-length = 119
 extend-include = ["*.ipynb"]
 
 [tool.ruff.lint]
-ignore = ["F401"]
+ignore = []
 extend-select = ["I"]
+
 
 [tool.ruff.lint.isort]
 case-sensitive = false

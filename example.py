@@ -1,6 +1,6 @@
 from functools import lru_cache, reduce
 from random import randint
-from typing import Dict, Generator, Iterator, List, NewType, Optional, Set, Tuple, Union
+from typing import List, Union
 
 import pretty_errors
 from rich import print
@@ -8,11 +8,6 @@ from rich.highlighter import Highlighter
 from rich.text import Text
 
 pretty_errors.configure(display_link=True)
-
-
-def generate_numbers(n: int) -> Union[Generator[int, None, None], Iterator[int]]:
-	for i in range(n):
-		yield i
 
 
 @lru_cache(maxsize=None)
@@ -68,50 +63,11 @@ bosch: Microware = Microware('Bosch', 'C')
 samsung: Microware = Microware('Samsung', 'A')
 
 
-def greeting(name: Optional[str]) -> str:
-	return f'Hello {name}'
-
-
-def double_or_square(number: Union[int, float]) -> Union[int, float]:
-	if isinstance(number, int):
-		return number * 2
-	else:
-		return number**2
-
-
-UserId = NewType('UserId', int)
-some_id = UserId(1243)
-
-
-def add(x: int, y: int) -> int:
-	return x + y
-
-
-num_list = [i for i in range(1, 101)]
-result = reduce(add, num_list)
-
-
 def factorial(n):
 	assert n >= 0, 'n should be greater than 0'
 	if n == 0 or n == 1:
 		return 1
 	return reduce(lambda a, b: a * b, range(1, n + 1))
-
-
-def get_name_age() -> Tuple[str, int]:
-	return '王五', 18
-
-
-def get_students() -> List[str]:
-	return ['小黑', '小华', '小米']
-
-
-def get_scores() -> Dict[str, int]:
-	return {'python': 100, 'java': 80, 'go': 80}
-
-
-def get_unique_numbers() -> Set[Union[str, int]]:
-	return {1, 2, 3, 4, 5, 6, '7'}
 
 
 def partition(arr: List[Union[float, int]], low: int, high: int) -> Union[int, float]:
