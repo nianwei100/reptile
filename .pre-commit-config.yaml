@@ -105,7 +105,3 @@ repos:
         args: [--config, .htmlhintrc]
       - id: dockerfile_lint
         args: [--json, --verbose, --dockerfile]
-  # - repo:
-  #   rev:
-  #   hooks:
-  #     - id:
