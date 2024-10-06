@@ -7,7 +7,6 @@ from rich import print
 from rich.highlighter import Highlighter
 from rich.text import Text
 
-pretty_errors.configure(display_link=True)
 
 
 @lru_cache(maxsize=None)
