@@ -1,8 +1,6 @@
 .venv/
 .mypy_cache/
 .cache/ruff/
-poetry.lock
 node_modules/
+poetry.lock
 .env
-tests/__pycache__/
-.pytest_cache/
