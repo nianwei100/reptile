@@ -2,12 +2,9 @@ from functools import lru_cache, reduce
 from random import randint
 from typing import List, Union
 
-import pretty_errors
 from rich import print
 from rich.highlighter import Highlighter
 from rich.text import Text
-
-pretty_errors.configure(display_link=True)
 
 
 @lru_cache(maxsize=None)
