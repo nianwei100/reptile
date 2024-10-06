@@ -1,7 +1,8 @@
-# uncommit
 .venv/
 .mypy_cache/
-.ruff_cache/
+.cache/ruff/
 poetry.lock
 node_modules/
 .env
+tests/__pycache__/
+.pytest_cache/
