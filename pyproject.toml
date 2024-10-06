@@ -48,7 +48,6 @@ extend-include = ["*.ipynb"]
 exclude = [".venv"]
 fix = true
 cache-dir = ".cache/ruff"
-update-check = true
 
 [tool.ruff.lint]
 extend-select = ["I"]
