@@ -7,7 +7,7 @@ readme = "README.rst"
 
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 
 
 [[tool.poetry.source]]
@@ -17,26 +17,17 @@ priority = "primary"
 
 
 [tool.poetry.group.dev.dependencies]
-ruff = {extras = ["jupyter"], version = "^0.6.8"}
-rich = {extras = ["jupyter"], version = "^13.9.1"}
 pretty-errors = "^1.2.25"
 mypy = "~1.10"
 pre-commit = "^3"
 pendulum = "^3.0.0"
 toolz = "^0.12.1"
-ipykernel = "^6.29.5"
 returns = {version = "~0", extras = ["compatible-mypy"]}
 python-dotenv = "^1.0.1"
 loguru = "^0.7.2"
 yamlfix = "~1"
-
-
-[tool.poetry.group.pro.dependencies]
-bs4 = "^0.0.2"
-
-
-[tool.poetry.group.test.dependencies]
-pytest = "^8.3.3"
+rich = "^13.9.2"
+ruff = "^0.6.9"
 
 
 [build-system]
@@ -45,9 +36,8 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.ruff]
-target-version = "py38"
+target-version = "py39"
 line-length = 119
-extend-include = ["*.ipynb"]
 exclude = [".venv"]
 fix = true
 cache-dir = ".cache/ruff"
