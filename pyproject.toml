@@ -91,3 +91,5 @@ warn_unused_ignores = true
 [tool.yamlfix]
 line_length = 119
 indentation = 2
+none_representation = "null"
+allow_duplicate_keys = false
