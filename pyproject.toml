@@ -46,6 +46,14 @@ mode = "poetry"
 pre-commit = ["autohooks.plugins.mypy", "autohooks.plugins.ruff"]
 
 
+[tool.autohooks.plugins.mypy]
+include = ["*.py", "*.ipynb"]
+
+
+[tool.autohooks.plugins.ruff]
+include = ["*.py", "*.ipynb"]
+
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
