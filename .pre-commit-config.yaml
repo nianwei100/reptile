@@ -96,9 +96,3 @@ repos:
         args: [--config, .htmlhintrc]
       - id: dockerfile_lint
         args: [--json, --verbose, --dockerfile]
-  - repo: https://github.com/psf/black
-    rev: 24.8.0
-    hooks:
-      - id: black
-        language_version: python3.8
-        types: [toml]
