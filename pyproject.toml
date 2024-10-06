@@ -19,23 +19,14 @@ rich = {extras = ["jupyter"], version = "^13.9.1"}
 pretty-errors = "^1.2.25"
 mypy = "~1.10"
 pre-commit = "^3"
-fake-useragent = "^1.5.1"
-faker = "^30.1.0"
 pendulum = "^3.0.0"
 toolz = "^0.12.1"
-bs4 = "^0.0.2"
-requests = "^2.32.3"
 ipykernel = "^6.29.5"
 yamlfix = "~1"
 returns = {version = "~0", extras = ["compatible-mypy"]}
-mycli = "^1.27.2"
-pgcli = "^4.1.0"
-litecli = "^1.12.3"
-pytest = "^8.3.3"
 python-dotenv = "^1.0.1"
-iredis = "^1.15.0"
 loguru = "^0.7.2"
-pandas = "^2"
+black = "^24.8.0"
 
 
 [tool.poetry.group.pro.dependencies]
