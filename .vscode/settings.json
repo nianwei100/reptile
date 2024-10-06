@@ -2,7 +2,7 @@
   "python.analysis.completeFunctionParens": true,
   "python.terminal.activateEnvironment": false,
   "python.terminal.activateEnvInCurrentTerminal": false,
-  "editor.fontFamily": "Monaspace Radon",
+  "editor.fontFamily": "Monaspace Neon",
   "editor.fontSize": 16,
   "terminal.integrated.fontFamily": "Monaspace Neon",
   "terminal.integrated.fontSize": 16,
