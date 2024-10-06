@@ -2,7 +2,7 @@
 name = "reptile"
 version = "0.1.0"
 description = "Python Type Hint"
-authors = ["nianwei"]
+authors = ["nianwei <2297709907@qq.com>"]
 readme = "README.rst"
 
 [tool.poetry.dependencies]
@@ -36,6 +36,14 @@ python-dotenv = "^1.0.1"
 iredis = "^1.15.0"
 loguru = "^0.7.2"
 pandas = "^2"
+
+
+[tool.poetry.group.pro.dependencies]
+bs4 = "^0.0.2"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
 
 [build-system]
 requires = ["poetry-core"]
