@@ -50,8 +50,7 @@ build-backend = "poetry.core.masonry.api"
 mode = "poetry"
 pre-commit = ['autohooks.plugins.mypy', 'autohooks.plugins.ruff']
 
-[tool.poetry.scripts]
-autohooks = "autohooks.cli:main"
+
 
 [tool.ruff]
 target-version = "py39"
