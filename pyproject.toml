@@ -6,7 +6,7 @@ authors = ["nianwei <2297709907@qq.com>"]
 readme = "README.rst"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 
 [[tool.poetry.source]]
 name = "mirrors"
@@ -27,6 +27,9 @@ returns = {version = "~0", extras = ["compatible-mypy"]}
 python-dotenv = "^1.0.1"
 loguru = "^0.7.2"
 black = "^24.8.0"
+autohooks = "^24.2.0"
+autohooks-plugin-ruff = "^24.1.0"
+autohooks-plugin-mypy = "^23.10.0"
 
 
 [tool.poetry.group.pro.dependencies]
@@ -40,8 +43,18 @@ pytest = "^8.3.3"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+
+
+
+[tool.autohooks]
+mode = "poetry"
+pre-commit = ['autohooks.plugins.mypy', 'autohooks.plugins.ruff']
+
+[tool.poetry.scripts]
+autohooks = "autohooks.cli:main"
+
 [tool.ruff]
-target-version = "py38"
+target-version = "py39"
 line-length = 119
 extend-include = ["*.ipynb"]
 exclude = [".venv"]
@@ -73,6 +86,7 @@ docstring-code-line-length = "dynamic"
 skip-magic-trailing-comma = false
 
 [tool.mypy]
+files = "autohooks"
 check_untyped_defs = true
 disallow_any_generics = true
 disallow_untyped_calls = false

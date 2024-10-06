@@ -1,7 +1,7 @@
 ---
 exclude: ^$
 default_stages: [commit]
-default_language_version: {python: python3.8}
+default_language_version: {python: python3.9}
 files: ''
 fail_fast: false
 repos:
