@@ -1,18 +1,10 @@
-from functools import lru_cache, reduce
+from functools import reduce
 from random import randint
 from typing import List, Union
 
 from rich import print
 from rich.highlighter import Highlighter
 from rich.text import Text
-
-
-@lru_cache(maxsize=None)
-def fibonacci(n: int) -> int:
-    if n <= 1:
-        return n
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 class RainbowHighlighter(Highlighter):
