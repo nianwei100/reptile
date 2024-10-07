@@ -47,9 +47,7 @@ cache-dir = ".cache/ruff"
 indent-width = 4
 required-version = "0.6.9"
 respect-gitignore = false
-show-source = true
 task-tags = ["HACK"]
-update-check = true
 
 [tool.ruff.flake8-import-conventions]
 [tool.ruff.flake8-import-conventions.aliases]
