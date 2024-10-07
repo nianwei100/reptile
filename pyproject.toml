@@ -8,16 +8,13 @@ repository = "https://github.com/python-poetry/poetry"
 homepage = "https://python-poetry.org"
 readme = "README.rst"
 
-
 [tool.poetry.dependencies]
 python = "^3.9"
-
 
 [[tool.poetry.source]]
 name = "mirrors"
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
 priority = "primary"
-
 
 [tool.poetry.group.dev.dependencies]
 pretty-errors = "^1.2.25"
@@ -32,17 +29,14 @@ yamlfix = "~1"
 rich = "^13.9.2"
 ruff = "^0.6.9"
 
-
 [tool.poetry.group.docs]
 optional = true
 [tool.poetry.group.docs.dependencies]
 sphinx = "^5.1.1"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
 
 [tool.ruff]
 target-version = "py39"
@@ -57,7 +51,6 @@ show-source = true
 task-tags = ["HACK"]
 update-check = true
 
-
 [tool.ruff.flake8-import-conventions]
 [tool.ruff.flake8-import-conventions.aliases]
 # Declare the default aliases.
@@ -68,15 +61,12 @@ pandas = "pd"
 seaborn = "sns"
 scipy = "sp"
 
-
 [tool.ruff.pydocstyle]
 convention = "google"
-
 
 [tool.ruff.lint]
 extend-select = ["I"]
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
-
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
@@ -91,7 +81,6 @@ section-order = [
     "local-folder",
 ]
 
-
 [tool.ruff.format]
 quote-style = "single"
 indent-style = "space"
@@ -99,7 +88,6 @@ line-ending = "auto"
 docstring-code-format = true
 docstring-code-line-length = "dynamic"
 skip-magic-trailing-comma = false
-
 
 [tool.mypy]
 check_untyped_defs = true
@@ -109,7 +97,6 @@ disallow_untyped_defs = false
 ignore_missing_imports = true
 no_implicit_optional = true
 warn_unused_ignores = true
-
 
 [tool.yamlfix]
 line_length = 119
