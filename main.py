@@ -21,4 +21,4 @@ def safe_divide(a, b) -> Result[int, float]:
 
 
 res = safe_divide(10, 0)
-print(1_000_000)
+print(1_000_0)
