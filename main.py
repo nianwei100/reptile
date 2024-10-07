@@ -6,9 +6,9 @@ def divide(a, b):
 
 
 @safe
-def safe_divide(a, b) -> Result[int, str]:
+def safe_divide(a, b) -> Result[int, float]:
     return divide(a, b)
 
 
-result = safe_divide(10, 0)
-print(result.failure())
+res = safe_divide(10, 0)
+print(res.failure())
