@@ -1,6 +1,7 @@
 from __future__ import barry_as_FLUFL
 
 from returns.result import Result, safe
+from rich import print
 
 
 def divide(a, b):
