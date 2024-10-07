@@ -50,7 +50,7 @@ line-length = 88
 exclude = [".venv"]
 fix = true
 cache-dir = ".cache/ruff"
-indent-width = 2
+indent-width = 4
 
 
 [tool.ruff.lint]
