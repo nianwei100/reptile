@@ -46,7 +46,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 target-version = "py39"
-line-length = 119
+line-length = 88
 exclude = [".venv"]
 fix = true
 cache-dir = ".cache/ruff"
@@ -55,6 +55,7 @@ indent-width = 4
 
 [tool.ruff.lint]
 extend-select = ["I"]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 
 [tool.ruff.lint.isort]
@@ -89,7 +90,7 @@ warn_unused_ignores = true
 
 
 [tool.yamlfix]
-line_length = 119
+line_length = 88
 indentation = 2
 none_representation = "null"
 allow_duplicate_keys = false
