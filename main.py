@@ -1,14 +1,7 @@
-from __future__ import (
-    barry_as_FLUFL,
-)
+from __future__ import barry_as_FLUFL
 
-from returns.result import (
-    Result,
-    safe,
-)
-from rich import (
-    print,
-)
+from returns.result import Result, safe
+from rich import print
 
 
 def divide(a, b):
@@ -21,4 +14,4 @@ def safe_divide(a, b) -> Result[int, float]:
 
 
 res = safe_divide(10, 0)
-print(1_000_0)
+print(res.failure())

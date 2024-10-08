@@ -49,8 +49,7 @@ required-version = "0.6.9"
 respect-gitignore = false
 task-tags = ["HACK"]
 
-[tool.ruff.flake8-import-conventions]
-[tool.ruff.flake8-import-conventions.aliases]
+[tool.ruff.lint.flake8-import-conventions.aliases]
 # Declare the default aliases.
 altair = "alt"
 "matplotlib.pyplot" = "plt"
