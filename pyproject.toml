@@ -47,10 +47,9 @@ cache-dir = ".cache/ruff"
 indent-width = 4
 required-version = "0.6.9"
 respect-gitignore = false
-task-tags = ["HACK"]
 
-[tool.ruff.flake8-import-conventions]
-[tool.ruff.flake8-import-conventions.aliases]
+
+[tool.ruff.lint.flake8-import-conventions.aliases]
 # Declare the default aliases.
 altair = "alt"
 "matplotlib.pyplot" = "plt"
@@ -59,12 +58,13 @@ pandas = "pd"
 seaborn = "sns"
 scipy = "sp"
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "google"
 
 [tool.ruff.lint]
 extend-select = ["I"]
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+task-tags = ["HACK"]
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
